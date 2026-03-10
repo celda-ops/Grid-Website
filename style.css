@@ -1,2 +1,69 @@
-/*style goes here/
+/*style goes here*/
+
+
+
+#cartoon{
+	max-width: 200px;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	align-items: center;
+	background-color: blue;
+	font-size: 1.5em;
+}
+
+h3{
+	margin-top: 0;
+	margin-bottom: 1.5em;
+}
+
+nav a{
+	text-decoration: none;
+
+}
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+ 
+}
+
+	
+
+#header{
+	order:1;
+}
+
+#description {
+	order:2;
+}
+#portrait{
+	order:3;
+	width:50%;
+}
+
+
+@media screen and (min-width: 600px){
+	#container{
+		width: 80%;
+		justify-content: center;
+		margin: auto;
+	}
+	nav ul{
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (min-width:1000px) {
+	#container{
+		display: grid;
+		grid-template-columns: 200px 1fr 1fr;
+    	grid-gap: 20px;
+    	
+	}
+}
 
