@@ -1,18 +1,44 @@
 /*style goes here*/
 
+body{
+	font-family: "Merriweather";
+}
 
+#container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 1.5em;
+
+
+}
+
+h1, h2, h3{
+	font-family: "Limelight";
+}
 
 #cartoon{
 	max-width: 200px;
+}
+
+aside ul{
+	display: block;
+	list-style-type: none;
+	text-align: center;
+	ba
 }
 
 nav ul{
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	align-items: center;
+	align-items: space-between;
 	background-color: blue;
 	font-size: 1.5em;
+}
+
+ul li{
+	padding: .5em;
 }
 
 h3{
@@ -26,16 +52,12 @@ nav a{
 }
 .main{
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column;
+    align-items: center;
  
 }
 
 	
-
-#header{
-	order:1;
-}
 
 #description {
 	order:2;
@@ -44,6 +66,12 @@ nav a{
 	order:3;
 	width:50%;
 }
+
+#bike{
+	width: 80%;
+}
+
+
 
 
 @media screen and (min-width: 600px){
