@@ -10,11 +10,31 @@ body{
 	align-items: center;
 	margin: 1.5em;
 
-
 }
 
 h1, h2, h3{
 	font-family: "Limelight";
+	text-align: center;
+}
+
+h1{
+	font-size: 3em;
+	background-color: #2e8b57;
+	border-radius: 6px;
+}
+.rank{
+	background-color: #2e8b57; /* your green */
+    color: white;
+    padding: 1em;
+    border-radius: 8px;
+    margin-top: 2em;
+
+
+}
+
+h3 ul{
+	padding: 0;
+	margin: 0;
 }
 
 #cartoon{
@@ -25,20 +45,31 @@ aside ul{
 	display: block;
 	list-style-type: none;
 	text-align: center;
-	ba
+	
 }
 
 nav ul{
 	display: flex;
 	flex-direction: column;
 	list-style-type: none;
-	align-items: space-between;
-	background-color: blue;
+	align-items:space-between;
+	background-color: orangered;
 	font-size: 1.5em;
+	border-radius: 6px;
+	padding-top: .5em;
+	padding-bottom: .5em;
 }
 
 ul li{
+	display: block;
 	padding: .5em;
+	margin-right: 2em;
+	border: solid black;
+
+}
+
+li{
+	border-radius: 6px;
 }
 
 h3{
@@ -60,15 +91,16 @@ nav a{
 	
 
 #description {
-	order:2;
 }
+
 #portrait{
-	order:3;
 	width:50%;
 }
 
 #bike{
 	width: 80%;
+	background-color: tan;
+	margin-top: 2em;
 }
 
 
@@ -87,11 +119,64 @@ nav a{
 }
 
 @media screen and (min-width:1000px) {
+	
+
 	#container{
 		display: grid;
-		grid-template-columns: 200px 1fr 1fr;
-    	grid-gap: 20px;
-    	
+		grid-template-columns: 2fr 1fr 1fr;
+    	grid-template-rows: auto 1fr;
+    	min-height: 100vh;
+    	grid-gap: 10px;
+    	grid-template-areas:
+
+    	"b b b"
+    	"a a d"
+    	"c c d"
 	}
+
+	.aside{
+		height: 100%;
+	}
+	.rank{
+		align-self: stretch;
+	}
+
+	header{
+		grid-area: a;
+	}
+
+	nav{
+		grid-area: b;
+		width: 100%;
+	}
+
+	.main {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-start;
+		grid-area: c;
+		width: 100%;
+	}
+
+	#portrait, #bike{
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+    	padding: 1.5em;
+
+	}
+	#bike{
+		width: 100%;
+	}
+
+	.author {
+    	display: flex;
+    	flex-direction: column;
+    	align-items: center; /* or flex-start if you want left-aligned */
+    	gap: 0.5rem;
+	}
+
+
+
 }
 
